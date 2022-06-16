@@ -1,6 +1,8 @@
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function ArticleCreate() {
+  const navigate = useNavigate();
 
   function onFormSubmit(event) {
     event.preventDefault();
@@ -10,7 +12,7 @@ function ArticleCreate() {
     axios.post(
       'https://articles-app-379fa-default-rtdb.firebaseio.com/articles.json', 
       Object.fromEntries(formData.entries())
-    );
+    ).then(response => navigate('/'));
   }
 
   
