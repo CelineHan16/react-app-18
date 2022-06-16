@@ -9,7 +9,7 @@ function ArticleFull() {
   useEffect(function() {
     axios.get(`https://articles-app-379fa-default-rtdb.firebaseio.com/articles/${id}.json`)
       .then(({ data }) => setArticle(data));
-  }, []);
+  }, [id]);
 
   let output = "Loading..."
   if (article !== null) {
@@ -23,6 +23,43 @@ function ArticleFull() {
       </>
     );
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <article>
