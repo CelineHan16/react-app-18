@@ -13,7 +13,7 @@ function ArticleUpdate() {
   useEffect(function() {
     axios.get(`https://articles-app-379fa-default-rtdb.firebaseio.com/articles/${id}.json`)
       .then(({ data }) => setArticle(data));
-  }, []);
+  }, [id]);
 
   function onFormSubmit(event) {
     event.preventDefault();
