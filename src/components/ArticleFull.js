@@ -18,8 +18,8 @@ function ArticleFull() {
         <h1>{article.title}</h1>
         <p>{article.description}</p>
 
-        <Link to={`/update/${id}`}>Update</Link><br />
-        <Link to={`/delete/${id}`}>delete</Link>
+        <Link to={`/update/${id}`}><button>Update</button></Link>
+        <Link to={`/delete/${id}`}><button>Delete</button></Link>
       </>
     );
   }
